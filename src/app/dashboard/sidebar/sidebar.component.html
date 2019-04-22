@@ -1,0 +1,96 @@
+<mat-sidenav-container>
+  <mat-sidenav
+    #sidenav
+    (opened)="log('Opened')"
+    (closed)="log('Closed')"
+    [(opened)]="hasOpened" mode="side"
+  >
+    <div class="logo">
+      <h1>
+        <a href="#" class="logo__img">
+          <img src="./../assets/images/logo.png" alt="logo" width="50px" height="50px">
+        </a>
+      </h1>
+      <a href="#" class="logo__name">
+        <span>
+          HUST
+        </span>
+        <span>
+          SM
+        </span>
+      </a>
+    </div>
+    <mat-list>
+      <mat-list-item>
+        <mat-icon mat-list-icon>home</mat-icon>
+        <h6 mat-line>Dashboard</h6>
+      </mat-list-item>
+    </mat-list>
+    <mat-divider></mat-divider>
+    <mat-list>
+      <h3 mat-subheader>General</h3>
+      <mat-list-item>
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <h6 mat-line>Notices</h6>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <h6 mat-line>QA-s</h6>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <h6 mat-line>Holiday Calendar</h6>
+      </mat-list-item>
+    </mat-list>
+    <mat-list>
+      <h3 mat-subheader>Personal</h3>
+      <mat-list-item>
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <h6 mat-line>Statistics</h6>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <button mat-button [matMenuTriggerFor]="animals">Requests
+          <mat-icon mat-list-icon>navigate_next</mat-icon>
+        </button>
+        <mat-menu #animals="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="vertebrates">Học bổng</button>
+          <button mat-menu-item [matMenuTriggerFor]="vertebrates">Thi cử</button>
+          <button mat-menu-item [matMenuTriggerFor]="invertebrates">Giấy tờ khác</button>
+        </mat-menu>
+        <mat-menu #vertebrates="matMenu">
+          <!-- <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button> -->
+          <button mat-menu-item>Mid Term</button>
+          <button mat-menu-item>Last Term</button>
+        </mat-menu>
+        <mat-menu #invertebrates="matMenu">
+          <button mat-menu-item>Bảng điểm</button>
+          <button mat-menu-item>Chứng nhận sv</button>
+        </mat-menu>
+        <!-- <mat-menu #fish="matMenu">
+          <button mat-menu-item>Baikal oilfish</button>
+          <button mat-menu-item>Bala shark</button>
+        </mat-menu> -->
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-button
+      (click)="hasOpened=!hasOpened"
+    >
+      <mat-icon mat-list-icon>menu</mat-icon>
+    </button>
+    <button mat-flat-button color="primary"
+      class="login-form__btn"
+      routerLink="/login"
+    >
+      Log out
+    </button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+  <!--
+  Options:
+  (click)="sidenav.open()"
+  (click)="sidenav.close()"
+  (click)="sidenav.toggle()"
+  -->

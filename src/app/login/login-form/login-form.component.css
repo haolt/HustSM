@@ -1,0 +1,16 @@
+.login-form__remember-pass,
+.login-form__field {
+  display: block;
+}
+
+.logo {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__name {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}

@@ -1,0 +1,45 @@
+.login {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+/* 
+.login-img, .login-form {
+  flex: 1
+} */
+.login__center, .login__img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.login__img {
+  height: 100vh;
+  background: url('./../../../assets/images/hust.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #e1e1e1;
+}
+
+.logo {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__name {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.login__sub-center {
+  width: 50%;
+}
