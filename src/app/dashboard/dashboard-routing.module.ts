@@ -9,8 +9,8 @@ const dashboardRoutes: Routes = [
     component: DashboardComponent,
     // children: [
     //   {
-    //     path: '',
-    //     component: LoginFormComponent
+    //     path: '/statistic',
+    //     loadChildren: './../statistics/statistics.module#StatisticsModule'
     //   }
     // ]
   }

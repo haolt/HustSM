@@ -7,7 +7,7 @@ mat-sidenav-content {
 }
 mat-sidenav {
   max-width: 300px;
-  background: #e1e1e1;
+  background: #2A3F54;
 }
 
 .logo {
@@ -26,4 +26,13 @@ button.mat-button {
     position: fixed;
     z-index: 3;
     background: transparent;
+    top: 0;
+}
+* {
+  color: #fff
+}
+
+.breadcrumb {
+  margin-top: 3rem;
+  background: #2A3F54;
 }
