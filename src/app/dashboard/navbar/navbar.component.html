@@ -1,17 +1,12 @@
 <nav class="navbar">
-  <div class="navbar__item">
-    <a routerLink="/dashboard">
-      <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
-      <!-- Include text description of the icon's meaning for screen-readers -->
-      <span class="cdk-visually-hidden">
-        Quantity of this field.
-      </span>
-    </a>
-  </div>
-  <div class="navbar__item">
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon matBadge="3" matBadgeColor="warn">add_alert</mat-icon>
-    </button>
+  <button class="navbar__item" mat-icon-button>
+    <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+    <span class="cdk-visually-hidden">
+      Quantity of this field.
+    </span>
+  </button>
+  <button class="navbar__item" mat-icon-button color="primary" [matMenuTriggerFor]="menu">
+    <mat-icon matBadge="3" matBadgeColor="warn">add_alert</mat-icon>
     <mat-menu #menu="matMenu">
       <mat-list>
         <h3 mat-subheader>Notifications</h3>
@@ -27,11 +22,9 @@
         </mat-list-item>
       </mat-list>
     </mat-menu>
-  </div>
-  <div class="navbar__item">
-    <button mat-icon-button [matMenuTriggerFor]="avatar">
-      <img src="./../../assets/images/tenor.gif" alt="avatar" width="30px">
-    </button>
+  </button>
+  <button class="navbar__item" mat-icon-button color="accent" [matMenuTriggerFor]="avatar">
+    <img src="./../../assets/images/tenor.gif" alt="avatar" width="30px">
     <mat-menu #avatar="matMenu">
       <button mat-menu-item>
         <mat-icon>dialpad</mat-icon>
@@ -44,6 +37,6 @@
         <span>Log out</span>
       </button>
     </mat-menu>
-  </div>
+  </button>
 <nav>
 

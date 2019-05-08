@@ -36,3 +36,14 @@ button.mat-button {
   margin-top: 3rem;
   background: #2A3F54;
 }
+
+
+mat-icon {
+  color: #2A3F54;
+  font-weight: 600;
+  font-size: 2.1em;
+}
+.main {
+  padding-top: 3em;
+  background: #F7F7F7;
+}

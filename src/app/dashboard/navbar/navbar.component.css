@@ -7,13 +7,9 @@ nav.navbar {
     justify-content: flex-end;
     z-index: 2;
     width: 100%;
-    background: #2A3F54;
+    background: #EDEDED;
+    border-bottom: 1px solid #D9DEE4;
 }
-
 .navbar__item {
-    margin-right: 1rem;
-}
-
-* {
-  color: #fff
+  margin: .5em;
 }

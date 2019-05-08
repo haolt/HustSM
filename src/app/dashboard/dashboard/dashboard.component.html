@@ -76,13 +76,15 @@
     </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <button mat-button
+    <button mat-button mat-icon-button
       (click)="hasOpened=!hasOpened"
     >
       <mat-icon mat-list-icon>menu</mat-icon>
     </button>
-    <app-navbar></app-navbar>
-    <router-outlet></router-outlet>
+    <div class="main">
+      <app-navbar></app-navbar>
+      <router-outlet></router-outlet>
+    </div>
     <!-- <button mat-flat-button color="primary"
       class="login-form__btn"
       routerLink="/login"

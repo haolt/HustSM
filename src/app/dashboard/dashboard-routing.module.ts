@@ -7,12 +7,12 @@ const dashboardRoutes: Routes = [
   {
     path: '',
     component: DashboardComponent,
-    // children: [
-    //   {
-    //     path: '/statistic',
-    //     loadChildren: './../statistics/statistics.module#StatisticsModule'
-    //   }
-    // ]
+    children: [
+      {
+        path: '',
+        loadChildren: './statistics/statistics.module#StatisticsModule'
+      }
+    ]
   }
 ];
 
