@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http'; 
 // import { MaterialModule } from './material/material.module';
 import { CoreModule } from './core/core.module';
 
@@ -20,7 +20,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
     // MaterialModule
   ],
   providers: [],

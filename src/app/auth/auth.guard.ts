@@ -19,7 +19,7 @@ export class AuthGuard implements CanActivate {
   ): boolean {
       const cookieToken = this.cookieService.getCookie('token');
       if (cookieToken) {
-        alert('có token');
+        // alert('có token');
         return true;
       }
       // this.router.navigate(['login']);

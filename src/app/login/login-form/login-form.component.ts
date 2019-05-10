@@ -21,32 +21,23 @@ export class LoginFormComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit() {
-    this.users = this.loginService.getUsers();
-    console.log(this.users);
-  }
+  ngOnInit() { }
 
   onChangeCheckbox() {
     this.isRememberAccount = !this.isRememberAccount;
   }
 
   onLogin() {
-    // console.log(this.email, this.password, this.isRememberAccount);
-    let curentUser = this.doCheckAccount(this.email, this.password);
-    console.log(curentUser);
-    if (curentUser) {
-      this.cookieService.setCookie('token', 'okela', 7);
-      this.router.navigate(['dashboard']);
-    }
-  }
-
-  private doCheckAccount(email, password) {
-    return this.users.filter(
-      (user) => {
-        (user.email === email) && 
-        (user.password === password)
-        return user;
+    console.log('Params: ', this.email, this.password, this.isRememberAccount);
+    this.loginService.doLogin(this.email, this.password).subscribe(
+      (res) => {
+        console.log(res);
+        this.cookieService.setCookie('token', res.token, 7);
+      },
+      (err) => {
+        this.loginService.handleError(err);
       }
-    )[0];
+    );
+    this.router.navigate(['dashboard']);
   }
 }
