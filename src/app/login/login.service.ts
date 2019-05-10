@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
-
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable, BehaviorSubject } from 'rxjs';
+
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,14 +14,8 @@ export class LoginService {
     public errStatus: string;
 
     constructor(
-    private http: HttpClient
+      private http: HttpClient
     ) { }
-    // Test
-    getUser() {
-      return this.http.get(
-        this.buildUrl('users/5cd4ee259ba77220b4a7a28b')
-      );
-    }
 
     doLogin(email: string, password: string): Observable<any> {
       const body = new HttpParams()
