@@ -23,8 +23,9 @@
       </mat-list>
     </mat-menu>
   </button>
-  <button class="navbar__item" mat-icon-button color="accent" [matMenuTriggerFor]="avatar">
-    <img src="./../../assets/images/tenor.gif" alt="avatar" width="30px">
+  <button class="navbar__item w100" mat-icon-button color="accent" [matMenuTriggerFor]="avatar">
+    <span>{{ currentUser?.name }}</span>
+    <!-- <img src="./../../assets/images/tenor.gif" alt="avatar" width="30px"> -->
     <mat-menu #avatar="matMenu">
       <button mat-menu-item>
         <mat-icon>dialpad</mat-icon>

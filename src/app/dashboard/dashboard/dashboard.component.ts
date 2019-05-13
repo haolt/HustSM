@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CookieService } from '../../core/cookie.service';
-import { DashboardService } from '../dashboard.service';
+import { DivisionsService } from '../divisions/divisions.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,20 +9,20 @@ import { DashboardService } from '../dashboard.service';
 export class DashboardComponent implements OnInit {
 
   constructor(
-    private cookieService: CookieService,
-    private dashboardService: DashboardService
+    private divisionsService: DivisionsService
   ) { }
 
   hasOpened = false;
-  public token: string;
 
   ngOnInit() {
-    if (this.cookieService.getCookie('token')) {
-      this.token = this.cookieService.getCookie('token');
-      console.log(this.token);
-      this.dashboardService.getInfoByToken(this.token).subscribe(
-        (data) => {
-          console.log(data);
+    if (localStorage.getItem('divisions') === null) {
+      this.divisionsService.getAllDivisions().subscribe(
+        (res) => {
+          localStorage.setItem('divisions', JSON.stringify(res));
+          console.log(res);
+        },
+        (err) => {
+          this.divisionsService.handleError(err);
         }
       );
     }

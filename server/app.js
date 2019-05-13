@@ -11,6 +11,9 @@ app.get('/', function (req, res) {
 var UserController = require(__root + 'routes/user/UserController');
 app.use('/users', UserController);
 
+var DivisionController = require(__root + 'routes/division/DivisionController');
+app.use('/divisions', DivisionController);
+
 // var AuthController = require(__root + 'auth/AuthController');
 var AuthController = require(__root + 'routes/auth/AuthController');
 app.use('/auth', AuthController);

@@ -13,3 +13,6 @@ nav.navbar {
 .navbar__item {
   margin: .5em;
 }
+.w100 {
+  width: 100px;
+}

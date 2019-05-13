@@ -4,6 +4,7 @@ mat-sidenav-container {
 mat-sidenav,
 mat-sidenav-content {
   padding: 16px;
+  background: #F7F7F7;
 }
 mat-sidenav {
   max-width: 300px;
@@ -28,9 +29,6 @@ button.mat-button {
     background: transparent;
     top: 0;
 }
-* {
-  color: #fff
-}
 
 .breadcrumb {
   margin-top: 3rem;
@@ -45,5 +43,5 @@ mat-icon {
 }
 .main {
   padding-top: 3em;
-  background: #F7F7F7;
+  /* background: #F7F7F7; */
 }

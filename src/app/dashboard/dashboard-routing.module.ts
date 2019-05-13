@@ -11,6 +11,10 @@ const dashboardRoutes: Routes = [
       {
         path: '',
         loadChildren: './statistics/statistics.module#StatisticsModule'
+      },
+      {
+        path: 'announcements',
+        loadChildren: './announcement/announcement.module#AnnouncementModule'
       }
     ]
   }

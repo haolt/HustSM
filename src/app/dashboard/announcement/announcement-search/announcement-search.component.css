@@ -1,0 +1,8 @@
+.form-field-date {
+	display: flex;
+	justify-content: space-between;
+}
+
+.form-field-date mat-form-field {
+	width: 45%;
+}

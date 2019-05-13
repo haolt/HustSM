@@ -50,7 +50,9 @@
   <mat-card class="intro__item">
     <h2>ANNOUNCEMENTS</h2>
     <p>Provides all the information you need for studying at Hanoi University of Science and Technology</p>
-    <button mat-raised-button color="primary">
+    <button mat-raised-button color="primary"
+      [routerLink]="['/dashboard/announcements']"
+    >
       Official Documents
     </button>
   </mat-card>

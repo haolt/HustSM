@@ -1,0 +1,70 @@
+img {
+  width: 100%;
+}
+.d-flex {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}
+.announcement__col-right {
+  width: 100%;
+  margin-left: 2em;
+  margin-top: 1em;
+}
+.announcement__col-left {
+  width: 150%;
+}
+.announcement-add, .announcement-list {
+  margin: 1em 0;
+}
+.announcement-add mat-card-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.announcement-add__avatar {
+  margin-right: 2em;
+}
+.announcement-add__message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.announcement-add__message-box {
+  display: inline-block;
+  position: relative;
+  padding:  10px 20px;
+  color: #fff;
+  box-sizing: border-box;
+  max-width: 300px;
+  min-width: 80px;
+  min-height: 38px;
+}
+.announcement-add__message-box:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 2px solid #e5a002;
+  border-radius: 10px;
+  box-sizing: border-box;
+  clip-path: polygon(0% 106%, 0% 86%, 30% 30%, 0% 36%, 0% 0%, 105% 0%, 105% 105%, 0 105%);
+}
+.announcement-add__message-box:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 20px;
+  background: #e5a002;
+  top: 34%;
+  left: -23px;
+  box-sizing: border-box;
+  clip-path: polygon(0 calc(100% - 2px), 100% 0, 100% 2px, 2px calc(100% - 2px), 100% calc(100% - 2px), 100% 100%, 0 100%);
+}
+
+.announcement-add__message-box span {
+  color: #333;
+}

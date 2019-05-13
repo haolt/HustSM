@@ -31,7 +31,7 @@ export class LoginFormComponent implements OnInit {
     console.log('Params: ', this.email, this.password, this.isRememberAccount);
     this.loginService.doLogin(this.email, this.password).subscribe(
       (res) => {
-        console.log(res);
+        // console.log(res);
         this.cookieService.setCookie('token', res.token, 7);
       },
       (err) => {

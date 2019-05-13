@@ -1,0 +1,53 @@
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h3>Filter Announcements</h3>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <form [formGroup]="exampleForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="w-100">
+        <input matInput placeholder="Keywords" formControlName="keywords">
+      </mat-form-field>
+
+      <mat-form-field class="w-100">
+        <mat-label>Assignee</mat-label>
+        <mat-select formControlName="division">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let div of divisions" [value]="div._id">
+            {{ div.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="form-field-date">
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="From Date"
+            [matDatepicker]="fromDate"
+            formControlName="fromDate"
+          >
+        <mat-datepicker-toggle matSuffix [for]="fromDate"></mat-datepicker-toggle>
+          <mat-datepicker #fromDate></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="To Date"
+            [matDatepicker]="toDate"
+            formControlName="toDate"
+          >
+        <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+          <mat-datepicker #toDate></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <button mat-flat-button color="primary"
+        class="w-100" 
+      > 
+          Search
+          <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
+      </button>
+    </form>
+  </mat-expansion-panel>
+</mat-accordion>
