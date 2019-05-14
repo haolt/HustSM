@@ -1,5 +1,6 @@
 img {
   width: 100%;
+  margin: 0;
 }
 .d-flex {
   display: -webkit-flex; /* Safari */
@@ -25,9 +26,9 @@ img {
   margin-right: 2em;
 }
 .announcement-add__message {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .announcement-add__message-box {
   display: inline-block;
@@ -67,4 +68,14 @@ img {
 
 .announcement-add__message-box span {
   color: #333;
+}
+.announcement__item {
+  display: flex;
+  justify-content: space-between;
+}
+.announcement__info {
+  width: 70%;
+}
+.announcement__img {
+  max-width: 30%;
 }

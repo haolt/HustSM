@@ -59,7 +59,9 @@
   <mat-card class="intro__item">
     <h2>MANAGE YOUR REQUESTS</h2>
     <p>Provides all the information you need for studying at Hanoi University of Science and Technology</p>
-    <button mat-raised-button color="primary">
+    <button mat-raised-button color="primary"
+      [routerLink]="['/dashboard/requests']"
+    >
       Official Documents
     </button>
   </mat-card>

@@ -12,7 +12,4 @@ export class AnnouncementListComponent implements OnInit {
 
   ngOnInit() {
   }
-  onAddAnnouncement() {
-  	
-  }
 }

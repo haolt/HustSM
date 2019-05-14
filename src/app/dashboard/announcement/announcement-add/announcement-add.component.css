@@ -1,0 +1,23 @@
+img {
+  width: 100%;
+  margin: 0;
+}
+mat-card {
+  margin: 1em 0;
+}
+mat-card-content {
+  display: flex;
+  justify-content: space-between;
+}
+mat-card-content mat-card {
+  display: inline-block;
+}
+.announcement-editor {
+  width: 57%;
+  margin: 0;
+}
+.announcement-options {
+  width: 36%;
+  margin-left: 2em;
+  margin-top: 0;
+}

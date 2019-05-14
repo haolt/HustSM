@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { startWith, map } from 'rxjs/operators';
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {MomentDateAdapter} from '@angular/material-moment-adapter';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 // the `default as` syntax.
@@ -48,7 +46,6 @@ export class AnnouncementSearchComponent implements OnInit {
   constructor() {}
   ngOnInit() {
     this.divisions = JSON.parse(localStorage.getItem('divisions'));
-    console.log(this.divisions);
   }
   onSubmit() {
     console.log(this.exampleForm.value);

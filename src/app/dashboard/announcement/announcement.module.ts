@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { RichTextEditorAllModule } from '@syncfusion/ej2-angular-richtexteditor';
 
 import { AnnouncementRoutingModule } from './announcement-routing.module';
 import { AnnouncementComponent } from './announcement/announcement.component';
@@ -20,7 +21,8 @@ import { DivisionsModule } from '../divisions/divisions.module';
     FormsModule,
     ReactiveFormsModule,
     DivisionsModule,
-    CommonModule
+    CommonModule,
+    RichTextEditorAllModule
   ]
 })
 export class AnnouncementModule { }
